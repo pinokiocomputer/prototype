@@ -1,0 +1,9 @@
+ENVIRONMENT
+CLAUDE.md
+AGENT.md
+PINOKIO.md
+node_modules
+.env
+cache
+.*
+~*
