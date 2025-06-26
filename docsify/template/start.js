@@ -38,7 +38,7 @@ module.exports = {
   }, {
     method: "shell.run",
     params: {
-      message: "npx -y docsify serve .",
+      message: "npx -y docsify-cli serve .",
       path: "docs",
       on: [{
         event: "/http:\/\/\\S+(?=\s|$)/m",
