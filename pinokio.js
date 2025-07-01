@@ -2,10 +2,10 @@ module.exports = {
   version: "4.0",
   title: "Prototype",
   menu: [{
-    image: "ai/icon.png",
+    image: "empty/icon.png",
     text: "Empty Project",
-    href: "ai/index.js",
-    readme: "ai/README.md",
+    href: "empty/index.js",
+    readme: "empty/README.md",
   }, {
     image: "python/python.png",
     text: "Python Project",

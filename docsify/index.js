@@ -54,6 +54,8 @@ module.exports = {
         //await fs.promises.writeFile(path.resolve(req.cwd, "docs/docsify.config.json"), JSON.stringify(config, null, 2))
         
         await fs.promises.cp(path.resolve(__dirname, "template"), req.cwd, { recursive: true, force: true })
+        await fs.promises.cp(path.resolve(__dirname, "template/AGENTS.md"), path.resolve(req.cwd, "CLAUDE.md"))
+        await fs.promises.cp(path.resolve(__dirname, "template/AGENTS.md"), path.resolve(req.cwd, "GEMINI.md"))
         await fs.promises.cp(req.input.paths[0], path.resolve(req.cwd, 'docs/repo'), { recursive: true, force: true })
 
         config.basePath = "/repo/"

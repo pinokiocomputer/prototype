@@ -58,6 +58,13 @@ module.exports = {
           raw: `\r\ncopying ${src} to ${dest}\r\n`
         })
         await fs.promises.cp(src, dest, { recursive: true })
+        await fs.promises.cp(path.resolve(__dirname, "template/AGENTS.md"), path.resolve(req.cwd, "CLAUDE.md"))
+        await fs.promises.cp(path.resolve(__dirname, "template/AGENTS.md"), path.resolve(req.cwd, "GEMINI.md"))
+        await kernel.download(
+          "https://raw.githubusercontent.com/pinokiocomputer/home/refs/heads/main/docs/README.md",
+          path.resolve(req.cwd, "PINOKIO.md",
+          ondata
+        )
 
         // 2. Store the input
         await fs.promises.writeFile(path.resolve(dest, "config.json"), JSON.stringify(req.input, null, 2))
