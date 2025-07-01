@@ -56,6 +56,7 @@ module.exports = {
         await fs.promises.cp(path.resolve(__dirname, "template"), req.cwd, { recursive: true, force: true })
         await fs.promises.cp(path.resolve(__dirname, "template/AGENTS.md"), path.resolve(req.cwd, "CLAUDE.md"))
         await fs.promises.cp(path.resolve(__dirname, "template/AGENTS.md"), path.resolve(req.cwd, "GEMINI.md"))
+        await fs.promises.rename(path.resolve(req.cwd, "gitignore"), path.resolve(req.cwd, ".gitignore"))
         await fs.promises.cp(req.input.paths[0], path.resolve(req.cwd, 'docs/repo'), { recursive: true, force: true })
 
         config.basePath = "/repo/"
