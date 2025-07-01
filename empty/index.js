@@ -21,7 +21,7 @@ module.exports = {
 
         await kernel.download(
           "https://raw.githubusercontent.com/pinokiocomputer/home/refs/heads/main/docs/README.md",
-          path.resolve(req.cwd, "PINOKIO.md",
+          path.resolve(req.cwd, "PINOKIO.md"),
           ondata
         )
         
