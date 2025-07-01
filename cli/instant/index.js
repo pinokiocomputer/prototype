@@ -37,7 +37,7 @@ module.exports = {
         if (req.input.venv) {
           start.run[0].params.venv = "venv"
         }
-        await kernel.download(
+        await kernel.bin.download(
           "https://raw.githubusercontent.com/pinokiocomputer/home/refs/heads/main/docs/README.md",
           path.resolve(req.cwd, "PINOKIO.md"),
           ondata

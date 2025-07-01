@@ -19,7 +19,7 @@ module.exports = {
         //await fs.promises.cp(path.resolve(__dirname, "template"), req.cwd, { recursive: true, force: true })
         //await fs.promises.writeFile(path.resolve(req.cwd, "docs/docsify.config.json"), JSON.stringify(config, null, 2))
 
-        await kernel.download(
+        await kernel.bin.download(
           "https://raw.githubusercontent.com/pinokiocomputer/home/refs/heads/main/docs/README.md",
           path.resolve(req.cwd, "PINOKIO.md"),
           ondata
