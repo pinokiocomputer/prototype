@@ -18,7 +18,7 @@ module.exports = {
       href: "python/new_gradio_pytorch/index.js",
       readme: "python/new_gradio_pytorch/README.md"
     }, {
-      text: "New Pytorch Python Project",
+      text: "New Pytorch Project",
       href: "python/new_pytorch/index.js",
       readme: "python/new_pytorch/README.md"
     }, {
