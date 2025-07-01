@@ -45,11 +45,11 @@ module.exports = {
           install.run[0].params.venv = "venv"
         }
         await fs.promises.writeFile(path.resolve(req.cwd, "install.json"), JSON.stringify(install, null, 2))
-        await kernel.bin.download(
-          "https://raw.githubusercontent.com/pinokiocomputer/home/refs/heads/main/docs/README.md",
-          path.resolve(req.cwd, "PINOKIO.md"),
-          ondata
-        )
+        await kernel.download({
+          uri: "https://raw.githubusercontent.com/pinokiocomputer/home/refs/heads/main/docs/README.md",
+          path: req.cwd,
+          filename: "PINOKIO.md"
+        }, ondata)
 
         // start script
         let start = {
